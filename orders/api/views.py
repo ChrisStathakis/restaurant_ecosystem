@@ -30,6 +30,7 @@ class OrderDetailApiView(RetrieveUpdateDestroyAPIView):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
+
 class OrderItemListApiView(ListAPIView):
     queryset = OrderItem.objects.all()
     serializer_class = OrderItemSerializer
