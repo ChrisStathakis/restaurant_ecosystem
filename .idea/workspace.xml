@@ -1,293 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cd23816-f27f-44f0-93c3-37a35eee8d20" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catalogue/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api/endpoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/CreateOrderView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/views/Homepage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/restaraunt_ecosystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/restaraunt_ecosystem.iml" afterDir="false" />
+    <list default="true" id="eab3d13c-de66-4a86-a011-0633c3517047" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/views/products/ProductListView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/catalogue/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalogue/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.github/workflows/main.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Documentation/documentation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ISSUE_TEMPLATE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gulpfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/jsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/apple-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/argon-dashboard-react.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/argon-dashboard-react.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/css/argon-dashboard-react.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/nucleo.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/nucleo.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/nucleo.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/nucleo.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/brand/argon-react-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/brand/argon-react.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/brand/blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/brand/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/brand/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/icons/common/github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/icons/common/google.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/angular.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/bootstrap.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/profile-cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/react.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/sketch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/team-1-800x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/team-2-800x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/team-3-800x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/team-4-800x800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/img/theme/vue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/css/nucleo-svg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/css/nucleo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/fonts/nucleo-icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/fonts/nucleo-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/fonts/nucleo-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/fonts/nucleo-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/plugins/nucleo/fonts/nucleo-icons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard-react.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/bootstrap/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_avatar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_chart.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_components.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_content.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_map.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_mask.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_section.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_separator.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/_vendors.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/alerts/_alert-dismissible.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/alerts/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/avatars/_avatar-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/avatars/_avatar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/badges/_badge-circle.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/badges/_badge-dot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/badges/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/buttons/_button-brand.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/buttons/_button-icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/buttons/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/cards/_card-animations.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/cards/_card-blockquote.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/cards/_card-profile.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/cards/_card-stats.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/cards/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/charts/_chart.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/close/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/custom-forms/_custom-checkbox.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/custom-forms/_custom-control.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/custom-forms/_custom-form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/custom-forms/_custom-radio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/custom-forms/_custom-toggle.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/dropdowns/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/footers/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/forms/_form-validation.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/forms/_form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/forms/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/headers/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/icons/_icon-shape.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/icons/_icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/list-groups/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/maps/_map.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/masks/_mask.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_modals.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/mixins/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/modals/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navbars/_navbar-collapse.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navbars/_navbar-dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navbars/_navbar-search.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navbars/_navbar-vertical.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navbars/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navs/_nav-pills.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/navs/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/paginations/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/popovers/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/progresses/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/separators/_separator.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/tables/_table.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/type/_article.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/type/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/type/_heading.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/type/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_backgrounds.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_blurable.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_floating.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_helper.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_opacity.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_overflow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/utilities/_transform.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/vendors/_bootstrap-datepicker.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/vendors/_headroom.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/vendors/_nouislider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/custom/vendors/_scrollbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_clipboard-js.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_component-examples.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_content.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_prism.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_sidebar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/argon-dashboard/docs/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/_navbar-dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/bootstrap/_spinners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/plugins/_plugin-react-datetime.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/scss/react/react-differences.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footers/AdminFooter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Footers/AuthFooter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Headers/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Headers/UserHeader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbars/AdminNavbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbars/AuthNavbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Sidebar/Sidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/Admin.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/Auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/variables/charts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/Index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Maps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/examples/Tables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaraunt_ecosystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/restaraunt_ecosystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/endpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/endpoints.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaraunt_ecosystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/restaraunt_ecosystem/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -297,81 +23,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
-    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="card.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/card.js">
+      <file leaf-file-name="ProductListView.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/views/products/ProductListView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Homepage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/views/Homepage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="177">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateOrderView.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/views/CreateOrderView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="57" column="99" selection-start-line="57" selection-start-column="99" selection-end-line="57" selection-end-column="99" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="endpoints.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/api/endpoints.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orders/api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orders/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#1129#2500#0" />
               </folding>
             </state>
           </provider>
@@ -379,43 +40,23 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/catalogue/models.py" />
-        <option value="$PROJECT_DIR$/catalogue/admin.py" />
-        <option value="$PROJECT_DIR$/catalogue/api/serializers.py" />
-        <option value="$PROJECT_DIR$/catalogue/api/views.py" />
-        <option value="$PROJECT_DIR$/orders/signals.py" />
-        <option value="$PROJECT_DIR$/orders/apps.py" />
-        <option value="$PROJECT_DIR$/orders/api/serializers.py" />
-        <option value="$PROJECT_DIR$/orders/models.py" />
-        <option value="$PROJECT_DIR$/orders/admin.py" />
-        <option value="$PROJECT_DIR$/orders/api/views.py" />
         <option value="$PROJECT_DIR$/restaraunt_ecosystem/urls.py" />
         <option value="$PROJECT_DIR$/catalogue/urls.py" />
-        <option value="$PROJECT_DIR$/frontend/views/Homepage.js" />
-        <option value="$PROJECT_DIR$/frontend/public/index.html" />
+        <option value="$PROJECT_DIR$/catalogue/views.py" />
+        <option value="$PROJECT_DIR$/catalogue/api/views.py" />
+        <option value="$PROJECT_DIR$/catalogue/admin.py" />
         <option value="$PROJECT_DIR$/frontend/src/components/Navbar.js" />
-        <option value="$PROJECT_DIR$/frontend/src/api/helpers.js" />
-        <option value="$PROJECT_DIR$/restaraunt_ecosystem/settings.py" />
-        <option value="$PROJECT_DIR$/frontend/src/views/Homepage.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/card.js" />
-        <option value="$PROJECT_DIR$/orders/urls.py" />
         <option value="$PROJECT_DIR$/frontend/src/api/endpoints.js" />
-        <option value="$PROJECT_DIR$/frontend/src/views/CreateOrderView.js" />
+        <option value="$PROJECT_DIR$/catalogue/models.py" />
+        <option value="$PROJECT_DIR$/catalogue/api/serializers.py" />
+        <option value="$PROJECT_DIR$/frontend/src/views/products/ProductListView.js" />
       </list>
     </option>
   </component>
@@ -435,15 +76,15 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="955" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -467,26 +108,24 @@
               <item name="restaurant_ecosystem" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restaurant_ecosystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="restaurant_ecosystem" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="products" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Zefarak\Desktop\projects\restaurant_ecosystem\frontend\src" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -500,40 +139,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="restaraunt_ecosystem" type="Python.DjangoServer" factoryName="Django server">
-      <module name="restaraunt_ecosystem" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4cd23816-f27f-44f0-93c3-37a35eee8d20" name="Default" comment="" />
-      <created>1602011203218</created>
+      <changelist id="eab3d13c-de66-4a86-a011-0633c3517047" name="Default" comment="" />
+      <created>1604495872175</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602011203218</updated>
+      <updated>1604495872175</updated>
     </task>
     <servers />
   </component>
@@ -541,23 +156,22 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34750265" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20625" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32943678" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32943678" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@restaraunt_ecosystem" order="7" weight="0.32968536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -566,372 +180,253 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/frontend/node_modules/wait-for-expect/lib/index.d.js" />
+        <option value="$PROJECT_DIR$/frontend/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+        <option value="$PROJECT_DIR$/frontend/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalogue/urls.py">
+    <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        <state relative-caret-position="255">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/views/Homepage.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navbar.js">
+    <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="527">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/urls.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/views/products/ProductListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="14" />
+        <state relative-caret-position="323">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1129#2500#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/urls.py">
+    <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
+        <state relative-caret-position="255">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/views/Homepage.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navbar.js">
+    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orders/models.py">
+    <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="493">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orders/admin.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/views/products/ProductListView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1129#2500#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="493">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/api/serializers.py">
+    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+        <state relative-caret-position="170">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
-          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+        <state relative-caret-position="493">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package-lock.json">
+    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="47" column="69" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="15" />
+        <state relative-caret-position="221">
+          <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/urls.py">
+    <entry file="file://$PROJECT_DIR$/catalogue/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        <state relative-caret-position="493">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restaraunt_ecosystem/settings.py">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        <state relative-caret-position="221">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/api/helpers.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="81" column="2" selection-start-line="81" selection-start-column="2" selection-end-line="81" selection-end-column="2" />
+        <state>
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/Navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="56" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/api/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/api/endpoints.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/views/Homepage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/api/endpoints.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="99" selection-start-line="16" selection-start-column="99" selection-end-line="16" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/catalogue/api/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#83#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/card.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/views/products/ProductListView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/views/CreateOrderView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="57" column="99" selection-start-line="57" selection-start-column="99" selection-end-line="57" selection-end-column="99" />
+        <state relative-caret-position="177">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1129#2500#0" />
           </folding>
         </state>
       </provider>

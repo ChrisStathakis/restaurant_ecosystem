@@ -29,7 +29,7 @@ class IngredientAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'price', 'product_class', 'category', 'active', ]
     list_filter = ['active', 'category', ]
-    fields = ['price', 'title', 'product_class', ]
+    fields = ['active', 'title', 'product_class', 'category', 'price']
     '''
     fieldsets = (
         ('General Info', {
@@ -45,5 +45,5 @@ class ProductAdmin(admin.ModelAdmin):
     '''
 
     def add_view(self, request, form_url='', extra_context=None):
-        self.exclude = ('active', )
+        # self.exclude = ('active', )
         return super(ProductAdmin, self).add_view(request)

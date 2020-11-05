@@ -14,15 +14,14 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['title', 'price', 'category', 'tag_category',
-                  'get_igrendients']
+        fields = ['title', 'price', 'category', 'product_class', 'tag_category', 'tag_product_class']
 
 
-class CategorySerializer(serializers.Serializer):
+class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ['title']
+        fields = ['active', 'title',]
 
 
 class IngredientSerializer(serializers.Serializer):
