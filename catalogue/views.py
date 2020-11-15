@@ -16,5 +16,6 @@ def homepage_api_view(request, format=None):
 def catalogue_homepage_view(request, format=None):
     return Response({
         'product_list': reverse('catalogue:product_list', format=format, request=request),
-        'category_list': reverse('catalogue:category_list', format=format, request=request)
+        'category_list': reverse('catalogue:category_list', format=format, request=request),
+        'product_class_list': reverse('catalogue:product_class_list', format=format, request=request)
     })

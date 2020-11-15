@@ -1,10 +1,10 @@
-from rest_framework.generics import RetrieveAPIView, ListAPIView, ListCreateAPIView
+from rest_framework.generics import RetrieveAPIView, ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import AllowAny
 from .serializers import ProductClassSerializer, CategorySerializer, IngredientSerializer, ProductSerializer
 from ..models import Product, ProductClass, Category, Ingredient
 
 
-class ProductClassApiListView(ListAPIView):
+class ProductClassApiListView(ListCreateAPIView):
     queryset = ProductClass.objects.all()
     serializer_class = ProductClassSerializer
     permission_classes = [AllowAny, ]
@@ -14,6 +14,11 @@ class ProductListApiListView(ListAPIView):
     queryset = Product.objects.filter(active=True)
     serializer_class = ProductSerializer
     permission_classes = [AllowAny, ]
+
+
+class ProductUpdateDeleteApiView(RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
 
 
 class CategoryListApiView(ListCreateAPIView):

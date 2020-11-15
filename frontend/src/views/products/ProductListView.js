@@ -1,12 +1,22 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 import {Row, Col, Table, Button, Card, Form} from 'react-bootstrap';
 import axiosInstance from "../../api/helpers";
 import {PRODUCT_LIST_ENDPOINT} from "../../api/endpoints";
+
+import CreateProductView from './CreateProductView'
+import {getCategories, getProductClass} from '../../my_store/actions/productActions'
+import productReducer from "../../my_store/reducers/productReducer";
+
 
 class ProductListView extends Component {
     constructor(props){
         super(props);
         this.state = {
+            detailView: false,
+            listView: true,
+            createView: false,
             categories: [],
             products: [],
             doneProducts:[],
@@ -19,6 +29,19 @@ class ProductListView extends Component {
 
     componentDidMount(){
         this.getProducts();
+    }
+
+    handleDetailView(id){
+        this.setState({
+            detailView: !this.state.detailView,
+            productSelected: id
+        })
+    };
+
+    handleCreateView = () => {
+        this.setState({
+            createView: !this.state.createView
+        })
     }
 
     handleSearch = (evt) =>{
@@ -52,11 +75,15 @@ class ProductListView extends Component {
 
     render(){
         const { doneProducts, products} = this.state;
+        const {listView, detailView, createView} = this.state;
         const {q}  = this.state.filter_data;
         return (
             <div>
                 <Row className='justify-content-center'>
-                    <Col><h4>Gi Gi</h4></Col>
+                    <Col>
+                        <Button success onClick={this.handleCreateView}>ΔΗΜΙΟΥΡΓΙΑ ΠΡΟΪΌΝΤΟΣ</Button>
+                        {createView ? <CreateProductView />: null}
+                    </Col>
                     <Col xs={6}>
                        <Table striped bordered hover>
                            <thead>
@@ -78,7 +105,7 @@ class ProductListView extends Component {
                                            <td>{product.tag_product_class}</td>
                                            <td>{product.tag_category}</td>
                                            <td>{product.price}</td>
-                                           <td><Button primary>ΕΠΕΞΕΡΓΑΣΙΑ</Button></td>
+                                           <td><Button onClick={() => this.handleDetailView(product.id)} primary>ΕΠΕΞΕΡΓΑΣΙΑ</Button></td>
                                        </tr>
                                    )
                                }) : null}
@@ -107,5 +134,10 @@ class ProductListView extends Component {
 
 }
 
+const mapStateToProps = state => ({
+    categories: state.productReducer.categories,
+    productClass: state.productReducer.productClass
+})
 
-export default ProductListView
+
+export default connect(mapStateToProps, {getCategories, getProductClass})(ProductListView)
