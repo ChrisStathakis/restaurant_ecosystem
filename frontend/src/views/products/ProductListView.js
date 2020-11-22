@@ -7,7 +7,9 @@ import {PRODUCT_LIST_ENDPOINT} from "../../api/endpoints";
 
 import CreateProductView from './CreateProductView'
 import {getCategories, getProductClass} from '../../my_store/actions/productActions'
-import productReducer from "../../my_store/reducers/productReducer";
+import ProductUpdateView from "./ProductUpdateView";
+import ProductClassListView from './ProductClassListView';
+import CategoryListView from './CategoryListView'
 
 
 class ProductListView extends Component {
@@ -15,12 +17,18 @@ class ProductListView extends Component {
         super(props);
         this.state = {
             detailView: false,
-            listView: true,
+
+            showListView: true,
+            showCategoryView: false,
+            showProductClassView: false,
+
             createView: false,
             categories: [],
             products: [],
             doneProducts:[],
             product_class: [],
+            productSelectedId: null,
+            product_class_view: false,
             filter_data:{
                 q: ''
             }
@@ -29,12 +37,21 @@ class ProductListView extends Component {
 
     componentDidMount(){
         this.getProducts();
+        this.props.getCategories();
+        this.props.getProductClass();
     }
 
     handleDetailView(id){
+        const is_open = this.state.detailView;
+        if(is_open){
+            this.setState({
+                detailView: false
+            })
+        }
         this.setState({
             detailView: !this.state.detailView,
-            productSelected: id
+            productSelectedId: id,
+
         })
     };
 
@@ -59,7 +76,8 @@ class ProductListView extends Component {
                 filter_data: filter_data
             }
         })
-    }
+    };
+
     getProducts(){
         axiosInstance.get(PRODUCT_LIST_ENDPOINT)
             .then(
@@ -73,46 +91,95 @@ class ProductListView extends Component {
             )
     }
 
+    closeUpdateWindow = () => {console.log('window updare!'); this.setState({detailView: false})};
+
+    closeWindow = (window) => {this.setState({[window]: false})};
+
+    handleShowProductClassView = () => {
+        this.setState({
+            showListView: false,
+            showProductClassView: true,
+            showCategoryView: false
+        }
+    )};
+
+    handleShowListView = () => {
+        this.setState({
+            showListView: true,
+            showProductClassView: false,
+            showCategoryView: false
+        })
+    }
+
+    handleShowCategoryView = () => {
+        this.setState({
+            showCategoryView: true,
+            showListView: false,
+            showProductClassView: false
+        })};
+
+    refreshProducts = () => {
+        this.setState({
+            createView: false,
+            detailView: false
+        });
+        this.getProducts()
+    };
+
     render(){
-        const { doneProducts, products} = this.state;
-        const {listView, detailView, createView} = this.state;
+        const { doneProducts, products, productSelectedId} = this.state;
+        const {showListView, detailView, createView, showProductClassView, showCategoryView} = this.state;
         const {q}  = this.state.filter_data;
         return (
             <div>
-                <Row className='justify-content-center'>
+                <hr />
+                <Row>
                     <Col>
                         <Button success onClick={this.handleCreateView}>ΔΗΜΙΟΥΡΓΙΑ ΠΡΟΪΌΝΤΟΣ</Button>
-                        {createView ? <CreateProductView />: null}
+                        <Button primary onClick={this.handleShowProductClassView}> ΔΗΜΙΟΥΡΓΙΑ ΕΙΔΟΥΣ</Button>
+                        <Button primary onClick={this.handleShowCategoryView}> ΔΗΜΙΟΥΡΓΙΑ ΚΑΤΗΓΟΡΙΑΣ</Button>
+                        <Button primary onClick={this.handleShowListView}> ΛΙΣΤΑ ΠΡΟΪΟΝΤΩΝ</Button>
+                    </Col>
+                </Row>
+                <hr />
+                {showProductClassView ? <ProductClassListView closeWindow={this.closeWindow} />: null}
+                {showCategoryView ? <CategoryListView /> : null}
+                {showListView ?
+                <Row className='justify-content-center'>
+                    <Col>
+                        {createView ? <CreateProductView refreshProducts={this.refreshProducts} />: null}
                     </Col>
                     <Col xs={6}>
-                       <Table striped bordered hover>
-                           <thead>
-                               <tr>
-                                   <th>#</th>
-                                   <th>ΠΡΟΪΟΝ</th>
-                                   <th>ΕΙΔΟΣ</th>
-                                   <th>ΚΑΤΗΓΟΡΙΑ</th>
-                                   <th>ΤΙΜΗ</th>
-                                   <th>-</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-                               {doneProducts ? products.map((product, i)=>{
-                                   return (
-                                       <tr>
-                                           <td>{product.id}</td>
-                                           <td>{product.title}</td>
-                                           <td>{product.tag_product_class}</td>
-                                           <td>{product.tag_category}</td>
-                                           <td>{product.price}</td>
-                                           <td><Button onClick={() => this.handleDetailView(product.id)} primary>ΕΠΕΞΕΡΓΑΣΙΑ</Button></td>
-                                       </tr>
-                                   )
-                               }) : null}
+                        <Table striped bordered hover>
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>ΠΡΟΪΟΝ</th>
+                                    <th>ΕΙΔΟΣ</th>
+                                    <th>ΚΑΤΗΓΟΡΙΑ</th>
+                                    <th>ΤΙΜΗ</th>
+                                    <th>-</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {doneProducts ? products.map((product, i) => {
+                                    return (
+                                        <tr>
+                                            <td>{product.id}</td>
+                                            <td>{product.title}</td>
+                                            <td>{product.tag_product_class}</td>
+                                            <td>{product.tag_category}</td>
+                                            <td>{product.price}</td>
+                                            <td><Button onClick={() => this.handleDetailView(product.id)}
+                                                        primary>ΕΠΕΞΕΡΓΑΣΙΑ</Button></td>
+                                        </tr>
+                                    )
+                                }) : null}
 
 
-                           </tbody>
-                       </Table>
+                                </tbody>
+                            </Table>
+
                     </Col>
                     <Col>
                        <Card style={{ width: '18rem' }}>
@@ -126,8 +193,13 @@ class ProductListView extends Component {
                                </Form>
                            </Card.Body>
                        </Card>
+                         {detailView ? <ProductUpdateView  id={productSelectedId} closeWindow={this.closeUpdateWindow} refreshProducts={this.refreshProducts} /> : null }
                     </Col>
-                </Row>
+                </Row> : null
+
+
+                }
+
             </div>
         )
     }

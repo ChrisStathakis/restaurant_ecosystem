@@ -27,9 +27,10 @@ class CreateOrderView extends Component{
         const data = this.state;
         axiosInstance.post(CreateOrderView, data)
             .then(respData=>{
-                if(respData.status_code == 200){
+                if(respData.status_code === 200){
                     const new_id = respData.data.id;
                     console.log('worked!', respData.data)
+                    this.props.refreshProducts();
                 }
             })
 
