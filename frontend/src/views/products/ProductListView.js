@@ -6,7 +6,7 @@ import axiosInstance from "../../api/helpers";
 import {PRODUCT_LIST_ENDPOINT} from "../../api/endpoints";
 
 import CreateProductView from './CreateProductView'
-import {getCategories, getProductClass} from '../../my_store/actions/productActions'
+import {getCategories, getProductClass, getProducts} from '../../my_store/actions/productActions'
 import ProductUpdateView from "./ProductUpdateView";
 import ProductClassListView from './ProductClassListView';
 import CategoryListView from './CategoryListView'
@@ -16,8 +16,15 @@ class ProductListView extends Component {
     constructor(props){
         super(props);
         this.state = {
-            detailView: false,
+            create_data: {
+                price: 0,
+                title: '',
+                productClass: null,
+                category: null
+            },
 
+
+            detailView: false,
             showListView: true,
             showCategoryView: false,
             showProductClassView: false,
@@ -109,8 +116,25 @@ class ProductListView extends Component {
             showProductClassView: false,
             showCategoryView: false
         })
-    }
+    };
 
+    handleCreateChange = (evt) => {
+        const {name, value} = evt.target;
+        const create_data = {
+            ...this.state.create_data,
+            [name]: value
+        }
+        this.setState({...this.state, create_data: create_data})
+    };
+
+    handleCreateForm = () => {
+        const endpoint = PRODUCT_LIST_ENDPOINT;
+        const data = this.state.create_data;
+        axiosInstance.post(endpoint, data)
+            .then(resp=>{
+                this.props.getProducts()
+            })
+    }
     handleShowCategoryView = () => {
         this.setState({
             showCategoryView: true,
@@ -123,18 +147,19 @@ class ProductListView extends Component {
             createView: false,
             detailView: false
         });
-        this.getProducts()
+        this.props.getProducts()
     };
 
     render(){
-        const { doneProducts, products, productSelectedId} = this.state;
-        const {showListView, detailView, createView, showProductClassView, showCategoryView} = this.state;
+        const { doneProducts, productSelectedId, create_data} = this.state;
+        const {showListView, detailView, showProductClassView, showCategoryView} = this.state;
+        const {categories, productClass, products} = this.props;
         const {q}  = this.state.filter_data;
         return (
             <div>
                 <hr />
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                         <Button success onClick={this.handleCreateView}>ΔΗΜΙΟΥΡΓΙΑ ΠΡΟΪΌΝΤΟΣ</Button>
                         <Button primary onClick={this.handleShowProductClassView}> ΔΗΜΙΟΥΡΓΙΑ ΕΙΔΟΥΣ</Button>
                         <Button primary onClick={this.handleShowCategoryView}> ΔΗΜΙΟΥΡΓΙΑ ΚΑΤΗΓΟΡΙΑΣ</Button>
@@ -146,8 +171,39 @@ class ProductListView extends Component {
                 {showCategoryView ? <CategoryListView /> : null}
                 {showListView ?
                 <Row className='justify-content-center'>
-                    <Col>
-                        {createView ? <CreateProductView refreshProducts={this.refreshProducts} />: null}
+                    <Col xs={4}>
+                        <Card>
+                            <Card.Header><h4>ΝΕΟ ΠΡΟΪΟΝ</h4></Card.Header>
+                            <Card.Body>
+                                <Form>
+                                    <Form.Group>
+                                        <Form.Label>ΟΝΟΜΑΣΙΑ</Form.Label>
+                                        <Form.Control onChange={this.handleCreateChange} type='text' value={create_data.title} name='title' />
+                                    </Form.Group>
+                                    <Form.Group name='category'  controlId="exampleForm.ControlSelect1">
+                                        <Form.Label>ΚΑΤΗΓΟΡΙΑ</Form.Label>
+                                        <Form.Control as="select"  onClick={this.handleCreateChange} name='category'>
+                                            {categories.map(function(item, i){
+                                                return <option value={item.id} name="category">{item.title}</option>
+                                            })}
+                                            </Form.Control>
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label>ΕΙΔΟΣ ΠΡΟΪΌΝΤΟΣ</Form.Label>
+                                        <Form.Control onClick={this.handleCreateChange} as='select' name='product_class'>
+                                            {productClass.map(function (item, i) {
+                                                return <option value={item.id}>{item.title}</option>
+                                            })}
+                                        </Form.Control>
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label>ΤΙΜΗ</Form.Label>
+                                        <Form.Control step='any' type='number' name='price' onChange={this.handleCreateChange} value={create_data.price} />
+                                    </Form.Group>
+                                    <Button onClick={this.handleCreateForm} primary>Save</Button>
+                                </Form>
+                            </Card.Body>
+                        </Card>
                     </Col>
                     <Col xs={6}>
                         <Table striped bordered hover>
@@ -181,7 +237,7 @@ class ProductListView extends Component {
                             </Table>
 
                     </Col>
-                    <Col>
+                    <Col xs={2}>
                        <Card style={{ width: '18rem' }}>
                            <Card.Title>Filters</Card.Title>
                            <Card.Body>
@@ -208,8 +264,9 @@ class ProductListView extends Component {
 
 const mapStateToProps = state => ({
     categories: state.productReducer.categories,
-    productClass: state.productReducer.productClass
-})
+    productClass: state.productReducer.productClass,
+    products: state.productReducer.products
+});
 
 
-export default connect(mapStateToProps, {getCategories, getProductClass})(ProductListView)
+export default connect(mapStateToProps, {getCategories, getProductClass, getProducts})(ProductListView)

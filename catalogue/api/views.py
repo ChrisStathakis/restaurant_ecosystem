@@ -10,6 +10,12 @@ class ProductClassApiListView(ListCreateAPIView):
     permission_classes = [AllowAny, ]
 
 
+class ProductClassApiUpdateView(RetrieveUpdateDestroyAPIView):
+    queryset = ProductClass.objects.all()
+    serializer_class = ProductClassSerializer
+    permission_class = [AllowAny, ]
+
+
 class ProductListApiListView(ListCreateAPIView):
     queryset = Product.objects.filter(active=True)
     serializer_class = ProductSerializer

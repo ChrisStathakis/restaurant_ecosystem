@@ -55,33 +55,38 @@ class CreateProductView extends Component{
         const {title, price} = this.state;
         console.log('categories', categories);
         return (
-            <Form>
-                <Form.Group>
-                    <Form.Label>ΟΝΟΜΑΣΙΑ</Form.Label>
-                    <Form.Control onChange={this.handleChange} type='text' value={title} name='title' />
-                </Form.Group>
-                <Form.Group name='category'  controlId="exampleForm.ControlSelect1">
-                    <Form.Label>ΚΑΤΗΓΟΡΙΑ</Form.Label>
-                    <Form.Control as="select"  onClick={this.handleDropdown} name='category'>
-                        {categories.map(function(item, i){
-                            return <option value={item.id} name="category">{item.title}</option>
-                        })}
-                        </Form.Control>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>ΕΙΔΟΣ ΠΡΟΪΌΝΤΟΣ</Form.Label>
-                    <Form.Control onClick={this.handleDropdown} as='select' name='product_class'>
-                        {productClass.map(function (item, i) {
-                            return <option value={item.id}>{item.title}</option>
-                        })}
-                    </Form.Control>
-                </Form.Group>
-                <Form.Group>
-                    <Form.Label>ΤΙΜΗ</Form.Label>
-                    <Form.Control step='any' type='number' name='price' onChange={this.handleChange} value={price} />
-                </Form.Group>
-                <Button onClick={this.handleFormSubmit} primary>Save</Button>
-            </Form>
+            <Card>
+                <Card.Header><h4>ΝΕΟ ΠΡΟΪΟΝ</h4></Card.Header>
+                <Card.Body>
+                    <Form>
+                        <Form.Group>
+                            <Form.Label>ΟΝΟΜΑΣΙΑ</Form.Label>
+                            <Form.Control onChange={this.handleChange} type='text' value={title} name='title' />
+                        </Form.Group>
+                        <Form.Group name='category'  controlId="exampleForm.ControlSelect1">
+                            <Form.Label>ΚΑΤΗΓΟΡΙΑ</Form.Label>
+                            <Form.Control as="select"  onClick={this.handleDropdown} name='category'>
+                                {categories.map(function(item, i){
+                                    return <option value={item.id} name="category">{item.title}</option>
+                                })}
+                                </Form.Control>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>ΕΙΔΟΣ ΠΡΟΪΌΝΤΟΣ</Form.Label>
+                            <Form.Control onClick={this.handleDropdown} as='select' name='product_class'>
+                                {productClass.map(function (item, i) {
+                                    return <option value={item.id}>{item.title}</option>
+                                })}
+                            </Form.Control>
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label>ΤΙΜΗ</Form.Label>
+                            <Form.Control step='any' type='number' name='price' onChange={this.handleChange} value={price} />
+                        </Form.Group>
+                        <Button onClick={this.handleFormSubmit} primary>Save</Button>
+                    </Form>
+                </Card.Body>
+            </Card>
         )
     }
     

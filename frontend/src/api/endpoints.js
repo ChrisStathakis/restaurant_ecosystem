@@ -9,3 +9,4 @@ export const PRODUCT_UPDATE_ENDPOINT = 'catalogue/product-update/';
 export const CATEGORIES_ENDPOINT = 'catalogue/category-list/';
 export const CATEGORY_UPDATE_DELETE_ENDPOINT = 'catalogue/category-update-delete/'
 export const PRODUCT_CLASS_ENDPOINT = 'catalogue/product-class-list/';
+export const PRODUCT_CLASS_UPDATE_DELETE_ENDPOINT = 'catalogue/product-class-update/';

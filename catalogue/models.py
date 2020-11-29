@@ -44,7 +44,7 @@ class Product(models.Model):
         return self.product_class.support_ingredients
 
     def tag_category(self):
-        return self.category.title
+        return self.category.title if self.category else 'No Category'
 
     def tag_product_class(self):
         return self.product_class.title
