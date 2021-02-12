@@ -1,5 +1,5 @@
 from rest_framework.generics import RetrieveAPIView, ListAPIView, ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from .serializers import ProductClassSerializer, CategorySerializer, IngredientSerializer, ProductSerializer
 from ..models import Product, ProductClass, Category, Ingredient
 

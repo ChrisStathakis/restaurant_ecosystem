@@ -1,4 +1,5 @@
 from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.permissions import IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 
@@ -12,6 +13,7 @@ class TableListApiView(ListAPIView):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     search_fields = ['title', ]
     filterset_fields = ['is_free', ]
+    permission_classes = [IsAuthenticated, ]
 
 
 class OrderListApiView(ListAPIView):
