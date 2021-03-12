@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
+import axios  from 'axios';
 import { connect } from 'react-redux';
 import { Redirect } from "react-router-dom";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckBox from 'react-validation/build/button';
-import {login} from "../my_store/actions/auth";
+import {loginAction} from "../my_store/actions/auth";
 
 import {isEmail} from 'validator';
+
 
 const required = value => {
     if (!value) {
@@ -58,10 +60,20 @@ class LoginView extends Component {
         e.preventDefault();
         this.setState({
             loading: true
-        })
+        });
         const {username, password} = this.state;
-        this.props.login(username, password);
+        this.props.loginAction(username, password);
+        const { history } = this.props;
+        history.push('/');
 
+
+
+    }
+
+    componentDidMount(){
+        console.log(this.props.accessToken);
+        const {isLoggedIn, accessToken} = this.props;
+        console.log('loading', isLoggedIn, accessToken)
     }
 
     render(){
@@ -128,13 +140,11 @@ class LoginView extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    const {isLoggedIn} = state.authReducer;
-    const {message} = state.messageReducer;
-    return{
-        isLoggedIn,
-        message
-    }
-}
 
-export default connect(mapStateToProps, {login})(LoginView);
+const mapStateToProps = state => ({
+    isLoggedIn: state.authReducer.isLoggedIn,
+    accessToken: state.authReducer.accessToken
+});
+
+
+export default connect(mapStateToProps, {loginAction})(LoginView);

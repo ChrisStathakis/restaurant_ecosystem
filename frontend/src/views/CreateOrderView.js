@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import {Row, Col, Form, Button} from 'react-bootstrap';
 import axiosInstance from "../api/helpers";
-
+import {CREATE_ORDER_ENDPOINT} from "../api/endpoints";
 
 
 
@@ -12,25 +14,36 @@ class CreateOrderView extends Component{
         this.state = {
             title: '',
             cost: 0,
-            table: null
+            table: null,
+            redirect: {
+                isTrue: false,
+                id: null
+            }
 
         }
+
     }
 
     componentDidMount(){
         this.setState({
-            table:this.props.table_id
+            table:this.props.id
         })
     }
 
     handleFormSubmit = () => {
         const data = this.state;
-        axiosInstance.post(CreateOrderView, data)
+        axiosInstance.post(CREATE_ORDER_ENDPOINT, data)
             .then(respData=>{
-                if(respData.status_code === 200){
-                    const new_id = respData.data.id;
-                    console.log('worked!', respData.data)
-                    this.props.refreshProducts();
+                console.log('responseData', respData);
+                if(respData.status === 201){
+                    const data = respData.data;
+                    const id = data.id;
+                    this.setState({
+                        redirect:{
+                            isTrue: true,
+                            id: id
+                        }
+                    })
                 }
             })
 
@@ -43,23 +56,22 @@ class CreateOrderView extends Component{
         this.setState({
             [name]: value
         })
-    }
+    };
 
     render(){
-        const {title} = this.state;
-
+        const {title, redirect} = this.state;
+        if(redirect.isTrue){return <Redirect to={`/orders/update/${redirect.id}`} />}
+        console.log('data', this.state);
         return(
             <div>
-                <Row>
+                <Row style={{marginTop:'5%'}}>
                     <Col />
                     <Col ms={6}>
                         <Form>
+                            <h4>Τραπεζι {this.props.id}</h4>
                             <Form.Group controlId='formBasicTitle'>
                                 <Form.Label>Τιτλος</Form.Label>
-                                <Form.Control name='title' value={title} onChange={this.handleTitle} type='text' placeholder='Title'/>
-                                <Form.Text className="text-muted">
-                                    We'll never share your email with anyone else.
-                                </Form.Text>
+                                <Form.Control name='title' value={title} onChange={this.handleTitle} type='text' placeholder='Προαιρετικο'/>
                             </Form.Group>
                             <Button onClick={this.handleFormSubmit}>Save</Button>
                         </Form>
@@ -71,5 +83,8 @@ class CreateOrderView extends Component{
     }
 }
 
+const mapStateToProps = state => ({
+    id: state.orderReducer.createOrderId
+})
 
-export default CreateOrderView;
+export default connect(mapStateToProps)(CreateOrderView);

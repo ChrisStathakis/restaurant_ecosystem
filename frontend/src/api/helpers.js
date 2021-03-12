@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {BASE_URL, REFRESH_ENDPOINT} from "./endpoints";
 import {logout, refreshTokenAction} from "../my_store/actions/auth";
-import  store from '../my_store/store'
+import  {store} from '../my_store/store'
 
 
 const axiosInstance = axios.create({
@@ -28,7 +28,7 @@ axiosInstance.interceptors.response.use(
         // Prevent infinite loops early
         if (error.response.status === 401 && originalRequest.url === REFRESH_ENDPOINT) {
             window.location.href = '/login/';
-            dispatch(logout())
+            dispatch(logout());
             return Promise.reject({message: '401 Exception'});
         }
 
@@ -67,11 +67,14 @@ axiosInstance.interceptors.response.use(
                         });
                     }else{
                         console.log("Refresh token is expired", tokenParts.exp, now);
+                        localStorage.removeItem('refreshToken');
+                        localStorage.removeItem('refreshToken');
+                        localStorage.removeItem('isLoggedIn');
                         window.location.href = '/login/';
                     }
                 }else{
                     console.log("Refresh token not available.");
-                    window.location.href = '/login/';
+                    /* window.location.href = '/login/';*/
                 }
         }
 

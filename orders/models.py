@@ -48,10 +48,8 @@ class OrderItem(models.Model):
         super(OrderItem, self).save(*args, **kwargs)
         self.order_related.save()
 
-
     def __str__(self):
         return self.product_related.title
-
 
     def tag_product(self):
         return self.product_related.title

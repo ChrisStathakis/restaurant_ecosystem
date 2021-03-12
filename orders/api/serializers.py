@@ -7,18 +7,18 @@ class TableSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Table
-        fields = ['title', 'is_free']
+        fields = ['title', 'is_free', 'id']
 
 
 class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['timestamp', 'title', 'cost', 'table', ]
+        fields = ['timestamp', 'title', 'cost', 'table', 'id']
 
 
 class OrderItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = OrderItem
-        fields = ['product_related', 'tag_product', 'order_related', 'tag_order', 'qty', 'cost', 'total_cost']
+        fields = ['product_related', 'tag_product', 'order_related', 'tag_order', 'qty', 'cost', 'total_cost', 'id']

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import axiosInstance from "../api/helpers";
 import {TABLES_LIST_ENDPOINT} from "../api/endpoints";
 import {Row, Col} from 'react-bootstrap';
-import {TableCard} from "../components/card";
+import TableCard from "../components/card";
 
 
 class HomepageView extends Component {
@@ -16,9 +16,8 @@ class HomepageView extends Component {
         }
     }
 
-
-    componentDidMount(){
-        axiosInstance.get(TABLES_LIST_ENDPOINT).then(
+    getTables(){
+         axiosInstance.get(TABLES_LIST_ENDPOINT).then(
             respData=>{
                 this.setState({
                     doneLoading: true,
@@ -28,11 +27,16 @@ class HomepageView extends Component {
         )
     }
 
+    componentDidMount(){
+        this.getTables();
+    }
+
     render(){
         const {doneLoading, tables} = this.state;
-        const {user: currentUser} = this.props;
-        if (!currentUser){
-            return <Redirect to="/login/" />
+        const {isLoggedIn} = this.props;
+
+        if (!isLoggedIn){
+            /*return <Redirect to="/login/" /> */
         }
         return (
             <div>
@@ -41,7 +45,7 @@ class HomepageView extends Component {
                     {doneLoading ?
                         tables.map((item, i) => {
                             return (
-                                <TableCard title={item.title} is_free={item.is_free} />
+                                <TableCard item={item} is_free={item.is_free} />
                             );
                         })
                         :null}
@@ -52,11 +56,10 @@ class HomepageView extends Component {
 
 }
 
-function mapStateToProps(state) {
-    const {user} = state.authReducer;
-    return {
-        user
-    }
-}
+const mapStateToProps = state => ({
+    isLoggedIn: state.authReducer.isLoggedIn
+});
+
+
 
 export default connect(mapStateToProps)(HomepageView);

@@ -1,11 +1,30 @@
 import {LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN, SET_MESSAGE} from "../actionTypes";
-
 import AuthService from '../../services/auth.service';
+import {LOGIN_URL} from "../../api/endpoints";
+import axios from  'axios';
+
+
+export const loginAction = (username, password) => (dispatch)=>{
+    return axios.post(LOGIN_URL, {username: username, password: password})
+        .then(respData=>{
+            console.log('login success', respData);
+            if (respData.status === 200){
+                const data = respData.data;
+                localStorage.setItem('accessToken', data.access);
+                localStorage.setItem('refreshToken', data.refresh);
+                dispatch({
+                    type: LOGIN_SUCCESS,
+                    payload: data
+                })
+            }
+        })
+};
+
 
 export const login = (username, password) => (dispatch) => {
     return AuthService.login(username, password).then(
         (data) =>{
-            console.log('data', data)
+            console.log('data', data);
             localStorage.setItem('accessToken', data.access);
             localStorage.setItem('refreshToken', data.refresh);
             console.log('action data', data);
