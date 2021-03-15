@@ -1,15 +1,19 @@
 import {LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN} from "../actionTypes";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const initialState = {
-    'tokens': {
-        accessToken: AsyncStorage.getItem('accessToken'),
-        refreshToken: AsyncStorage.getItem('refreshToken')
+
+async function initialState () {
+    return{
+        tokens: {
+        accessToken:  ''  ,
+        refreshToken: ''
     },
-    isLoggedIn: AsyncStorage.getItem('IsLoggedIn')
+    isLoggedIn: ''
+    }
 }
 
-export default function(state=initialState, action){
+
+export default function(state=initialState(), action){
+
     switch(action.type){
         case LOGIN_SUCCESS:
             return {

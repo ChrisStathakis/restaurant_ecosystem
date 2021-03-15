@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import { Text, TextInput, View, Button } from 'react-native';
-import  themes  from './general/stylesheets';
-import {loginAction} from './my_store/actions/authActions'
+import  themes  from '../general/stylesheets';
+
 
 class LoginView extends React.Component {
     constructor(props){
@@ -16,25 +15,23 @@ class LoginView extends React.Component {
 
     handleChangeUsername = (textValue) => {
         this.setState({username: textValue})
-    }
+    };
 
     handleChangePassword = (textValue) => {
         this.setState({password: textValue})
-    }
+    };
 
     handleLogin = () => {
         this.setState({loading: true});
         const {username, password} = this.state;
         this.props.loginAction(username, password);
         
-    }
+    };
 
     render(){
-        const {username, password} = this.state
-        const { navigation, isLoggedIn } = this.props;
-        if (isLoggedIn){
-            navigation.navigate('Home');
-        }
+        const {username, password} = this.state;
+        const { navigation } = this.props;
+
         return (
             <View>
                 <Text>Login</Text>
@@ -60,10 +57,7 @@ class LoginView extends React.Component {
 
 }
 
-const mapStateToProps = state => ({
-    isLoggedIn: state.authReducer.isLoggedIn
-})
 
 
 
-export default connect(mapStateToProps, {loginAction})(LoginView);
+export default LoginView
