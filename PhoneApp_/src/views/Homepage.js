@@ -4,6 +4,8 @@ import { ListItem, Card, Button, Icon } from 'react-native-elements';
 import { TABLES_LIST_ENDPOINT } from '../api/endpoints';
 import {axiosInstance} from '../api/helpers'
 import {isLoggedIn} from "../api/tokensData";
+import { connect } from 'react-redux';
+import {initialDataAction} from "../my_store/actions/authActions";
 
 class HomeScreen extends React.Component {
 
@@ -15,31 +17,37 @@ class HomeScreen extends React.Component {
         isLoggedIn: true
     }
   }
-
-
-  getTables(){
-      axiosInstance.get(TABLES_LIST_ENDPOINT)
-          .then(respData=>{
-            this.setState({
-                doneLoading: true,
-                tables: respData.data
-            })
-          })
-  }
-
   componentDidMount(){
-    this.getTables();
+      const thisComp = this;
+      const doneAppLoading = this.props.doneAppLoading;
+      if (doneAppLoading){
+          this.setState({
+              isLoggedIn: this.props.isLoggedIn
+          })
+      } else {
+          isLoggedIn().then((response)=>{
+              this.props.initialDataAction(response.accessToken, response.refreshToken, response.isLoggedIn
+              )
+          })
+      }
+      isLoggedIn().then((response)=>{
+          console.log('repsonse');
+          thisComp.setState({
+              isLoggedIn: response
+          })
 
+      })
   }
-
 
   render(){
     const {doneLoading, tables, isLoggedIn} = this.state;
+    const { navigation } = this.props;
     if (!isLoggedIn){
-        console.log('here');
+        console.log('here', isLoggedIn);
+        navigation.navigate('Login')
 
     } else {
-        console.log('ba')
+        console.log('ba', isLoggedIn)
     }
   
     return (
@@ -52,8 +60,12 @@ class HomeScreen extends React.Component {
 
 }
 
+const mapStateToProps = state => ({
+    doneAppLoading: state.authReducer.doneAppLoading,
+    isLoggedIn: state.isLoggedIn
+});
 
 
 
 
-export default HomeScreen;
+export default connect(mapStateToProps, {initialDataAction})(HomeScreen);

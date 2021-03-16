@@ -1,9 +1,20 @@
 import axios from 'axios';
 import {MMKV} from 'react-native-mmkv';
-import { LOGIN_SUCCESS, REFRESH_TOKEN, LOGOUT } from '../actionTypes';
+import {LOGIN_SUCCESS, REFRESH_TOKEN, LOGOUT, INITIAL_DATA} from '../actionTypes';
 import { LOGIN_URL } from '../endpoints';
 
-
+export const initialDataAction = (accessToken, refreshToken, isLoggedIn) => (dispatch) => {
+    return (
+        dispatch({
+            type: INITIAL_DATA,
+            payload: {
+                accessToken: accessToken,
+                refreshToken: refreshToken,
+                isLoggedIn: isLoggedIn
+            }
+        })
+    )
+}
 
 export const loginAction = (username, password) => (dispatch) => {
     return axios.post(LOGIN_URL, {

@@ -15,7 +15,7 @@ const axiosInstance = axios.create({
         'Content-Type': 'application/json',
         'accept': 'application/json'
     }
-})
+});
 
 
 
@@ -43,8 +43,8 @@ axiosInstance.interceptors.response.use(
         if (error.response.data.code === "token_not_valid" && error.response.status === 401 && error.response.statusText === "Unauthorized"){
 
             if ( typeof refreshToken === 'undefined'){
-                logout()
-                return Promise.reject({'message': 'Refresh token is undentifdied'})
+                logout();
+                return Promise.reject({'message': 'Refresh token is undentified'})
             }
             if (refreshToken){
                 const tokenParts = JSON.parse(atob(refreshToken.split('.')[1]));
@@ -56,7 +56,7 @@ axiosInstance.interceptors.response.use(
 
                             axiosInstance.defaults.headers['Authorization'] = 'Bearer ' + response.data.access;
                             originalRequest.headers['Authorization'] = "Bearer " + response.data.access;
-                            dispatch(refreshAction(response.data.access))
+                            dispatch(refreshAction(response.data.access));
                             return axiosInstance(originalRequest)
                         })
                         .catch(err => {
@@ -64,10 +64,7 @@ axiosInstance.interceptors.response.use(
                         });
                     }else{
                         console.log("Refresh token is expired", tokenParts.exp, now);
-                        MMKV.delete('accessToken');
-                        MMKV.delete('refreshToken');
-                        MMKV.delete('isLoggedIn');
-                        dispatch(logoutAction())
+                        logout()
                     }
                 }else{
                     console.log("Refresh token not available.");

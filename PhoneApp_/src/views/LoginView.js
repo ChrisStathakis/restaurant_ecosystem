@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Text, TextInput, View, Button } from 'react-native';
 import  themes  from '../general/stylesheets';
+import {loginAsync} from "../api/tokensData";
+import {initialDataAction, loginAction} from "../my_store/actions/authActions";
 
 
 class LoginView extends React.Component {
@@ -9,7 +12,8 @@ class LoginView extends React.Component {
         this.state = {
             username: '',
             password: '',
-            loading: false
+            loading: false,
+            isLoggedIn: false
         }
     }
 
@@ -24,14 +28,30 @@ class LoginView extends React.Component {
     handleLogin = () => {
         this.setState({loading: true});
         const {username, password} = this.state;
-        this.props.loginAction(username, password);
+        loginAsync(username, password).then(
+            resp=>{
+                if (resp){
+                    this.setState({
+                        isLoggedIn: true
+                    })
+                }
+            }
+        )
         
     };
 
-    render(){
-        const {username, password} = this.state;
-        const { navigation } = this.props;
+    componentDidMount(){
 
+    }
+
+
+
+    render(){
+        const {username, password, } = this.state;
+        const { navigation, isLoggedIn } = this.props;
+        if (isLoggedIn){
+            navigation.navigate('Home');
+        }
         return (
             <View>
                 <Text>Login</Text>
@@ -57,7 +77,9 @@ class LoginView extends React.Component {
 
 }
 
+const mapStateToProps = state =>({
+    isLoggedIn: state.authReducer.isLoggedIn
+})
 
 
-
-export default LoginView
+export default connect(mapStateToProps, { initialDataAction, loginAction })(LoginView)

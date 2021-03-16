@@ -1,4 +1,4 @@
-import {LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN} from "../actionTypes";
+import {INITIAL_DATA, LOGIN_FAIL, LOGIN_SUCCESS, LOGOUT, REFRESH_TOKEN} from "../actionTypes";
 
 
 async function initialState () {
@@ -7,7 +7,8 @@ async function initialState () {
         accessToken:  ''  ,
         refreshToken: ''
     },
-    isLoggedIn: ''
+    isLoggedIn: '',
+        doneAppLoading: false
     }
 }
 
@@ -15,6 +16,16 @@ async function initialState () {
 export default function(state=initialState(), action){
 
     switch(action.type){
+        case INITIAL_DATA:
+            const payload = action.payload;
+            return {
+                isLoggedIn: payload.isLoggedIn,
+                tokens: {
+                    accessToken: payload.accessToken,
+                    refreshToken: payload.refreshToken
+                },
+                doneAppLoading: true
+            }
         case LOGIN_SUCCESS:
             return {
                 ...state,
